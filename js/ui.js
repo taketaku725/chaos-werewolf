@@ -14,8 +14,14 @@ const UI = {
 
   renderNightInput() {
     const screen = document.getElementById("screen");
-    screen.innerHTML = `<h2>夜 ${State.nightNumber}</h2>
-                        <p>プレイヤー入力フェーズ</p>`;
+    const players = State.players
+      .map(p => `<li>${p.name} - ${p.role.name}</li>`)
+      .join("");
+
+    screen.innerHTML = `
+      <h2>初夜</h2>
+      <ul>${players}</ul>
+  `  ;
   },
 
   renderDay() {
