@@ -1,20 +1,19 @@
 {
   "citizen": [
-    {
-      "name": "騎士",
-      "type": "Guard",
-      "alignment": "citizen",
-      "result": "white",
-      "abilities": ["guard"]
-    }
+    { "name": "騎士", "type": "Guard", "alignment": "citizen", "result": "white" },
+    { "name": "霊媒師", "type": "Detect", "alignment": "citizen", "result": "white" }
+  ],
+  "seer": [
+    { "name": "直感者", "type": "Detect", "alignment": "citizen", "result": "white" }
   ],
   "wolf": [
-    {
-      "name": "王狼",
-      "type": "Attack",
-      "alignment": "wolf",
-      "result": "black",
-      "abilities": ["attack_ignore_guard"]
-    }
+    { "name": "王狼", "type": "Attack", "alignment": "wolf", "result": "black" },
+    { "name": "暴走狼", "type": "Attack", "alignment": "wolf", "result": "black" }
+  ],
+  "mad": [
+    { "name": "共鳴狂人", "type": "Detect", "alignment": "wolf", "result": "black" }
+  ],
+  "third": [
+    { "name": "狐", "type": "Effect", "alignment": "third", "result": "third" }
   ]
 }
