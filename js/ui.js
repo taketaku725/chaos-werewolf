@@ -2,7 +2,14 @@ const UI = {
 
   renderSetup() {
     const screen = document.getElementById("screen");
-    screen.innerHTML = "<h2>設定画面</h2><p>準備中...</p>";
+    screen.innerHTML = `
+      <h2>設定</h2>
+      <label>人数:
+        <input type="number" id="playerCount" value="9" min="3" max="20">
+      </label>
+      <br><br>
+      <button onclick="Game.startGame()">ゲーム開始</button>
+  `  ;
   },
 
   renderNightInput() {
