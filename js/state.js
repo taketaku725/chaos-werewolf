@@ -1,7 +1,14 @@
 const State = {
-  phase: "setup", // setup, night_input, night_resolve, day, vote, result
+  phase: "setup",
   nightNumber: 0,
   players: [],
-  pendingActions: [],
-  logs: []
+  rolesData: null,
+  settings: {
+    totalPlayers: 9,
+    citizen: 5,
+    wolf: 3,
+    third: 1,
+    seerCount: 1,
+    madCount: 1
+  }
 };
