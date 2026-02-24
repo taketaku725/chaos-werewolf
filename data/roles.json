@@ -1,0 +1,20 @@
+{
+  "citizen": [
+    {
+      "name": "騎士",
+      "type": "Guard",
+      "alignment": "citizen",
+      "result": "white",
+      "abilities": ["guard"]
+    }
+  ],
+  "wolf": [
+    {
+      "name": "王狼",
+      "type": "Attack",
+      "alignment": "wolf",
+      "result": "black",
+      "abilities": ["attack_ignore_guard"]
+    }
+  ]
+}
