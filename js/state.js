@@ -3,6 +3,7 @@ const State = {
   nightNumber: 0,
   players: [],
   rolesData: null,
+  rollRevealIndex = 0,
   settings: {
     totalPlayers: 9,
     citizen: 5,
