@@ -7,10 +7,12 @@ const Game = {
 
   startGame() {
     this.createPlayers();
-    State.phase = "night_input";
-    State.nightNumber = 0;
-    Role.assign(); // 初夜開始時に配布
-    UI.renderNightInput();
+    Role.assign();
+
+    State.phase = "role_reveal";
+    State.roleRevealIndex = 0;
+
+    UI.renderRoleReveal();
   },
 
   createPlayers() {
