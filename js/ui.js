@@ -9,7 +9,7 @@ const UI = {
       </label>
       <br><br>
       <button onclick="Game.startGame()">ゲーム開始</button>
-  `  ;
+    `;
   },
 
   renderRoleReveal() {
@@ -20,7 +20,7 @@ const UI = {
       <h2>${player.name}</h2>
       <p>あなたの役職を確認してください</p>
       <button onclick="UI.showRole()">見る</button>
-  `  ;
+    `;
   },
 
   showRole() {
@@ -32,7 +32,7 @@ const UI = {
       <h3>${player.role.name}</h3>
       <p>陣営: ${player.alignment}</p>
       <button onclick="UI.hideRole()">隠す</button>
-  `  ;
+    `;
   },
 
   hideRole() {
@@ -54,7 +54,18 @@ const UI = {
       <h2>初夜</h2>
       <p>役職確認が完了しました。</p>
       <button onclick="Game.nextPhase()">夜を進める</button>
-  `  ;
+    `;
+  },
+
+  renderNightTurn() {
+    const screen = document.getElementById("screen");
+    const player = State.players[State.nightInputIndex];
+
+    screen.innerHTML = `
+      <h2>初夜</h2>
+      <h3>${player.name}</h3>
+      <button onclick="UI.handleNightAction()">確認</button>
+    `;
   },
 
   renderDay() {
