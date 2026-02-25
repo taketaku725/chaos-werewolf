@@ -11,31 +11,27 @@ const Role = {
 
     let pool = [];
 
-    // 占い
     pool.push(...this.randomPick(r.seer, s.seerCount));
-
-    // 市民（占い除く）
     pool.push(...this.randomPick(r.citizen, s.citizen - s.seerCount));
-
-    // 狼（狂人除く）
     pool.push(...this.randomPick(r.wolf, s.wolf - s.madCount));
-
-    // 狂人
     pool.push(...this.randomPick(r.mad, s.madCount));
-
-    // 第三
     pool.push(...this.randomPick(r.third, s.third));
 
-    // シャッフル
+    if (pool.length !== State.players.length) {
+      console.error("役職数とプレイヤー数が一致しません");
+      console.log("pool:", pool.length);
+      console.log("players:", State.players.length);
+      return;
+    }
+
     pool = this.shuffle(pool);
 
-    // プレイヤーに付与
     State.players.forEach((p, i) => {
       p.role = pool[i];
       p.alignment = pool[i].alignment;
       p.alive = true;
     });
-  },
+    },
 
   randomPick(array, count) {
     const shuffled = this.shuffle([...array]);
