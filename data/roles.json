@@ -1,19 +1,44 @@
 {
   "citizen": [
     { "name": "騎士", "type": "Guard", "alignment": "citizen", "result": "white" },
-    { "name": "霊媒師", "type": "Detect", "alignment": "citizen", "result": "white" }
+    { "name": "影騎士", "type": "Guard", "alignment": "citizen", "result": "white" },
+    { "name": "霊媒師", "type": "Detect", "alignment": "citizen", "result": "white" },
+    { "name": "観測者", "type": "Detect", "alignment": "citizen", "result": "white" },
+    { "name": "沈黙者", "type": "Cancel", "alignment": "citizen", "result": "white" },
+    { "name": "投票操作官", "type": "Effect", "alignment": "citizen", "result": "white" },
+    { "name": "疑念吸収者", "type": "Effect", "alignment": "citizen", "result": "white" },
+    { "name": "執念者", "type": "Effect", "alignment": "citizen", "result": "white" },
+    { "name": "仮死体質", "type": "Effect", "alignment": "citizen", "result": "white" },
+    { "name": "転生者", "type": "Effect", "alignment": "citizen", "result": "white" }
   ],
+
   "seer": [
-    { "name": "直感者", "type": "Detect", "alignment": "citizen", "result": "white" }
+    { "name": "直感者", "type": "Detect", "alignment": "citizen", "result": "white" },
+    { "name": "偏向占術師", "type": "Detect", "alignment": "citizen", "result": "white" },
+    { "name": "逆転視者", "type": "Detect", "alignment": "citizen", "result": "white" },
+    { "name": "分裂占者", "type": "Detect", "alignment": "citizen", "result": "white" },
+    { "name": "月光占者", "type": "Detect", "alignment": "citizen", "result": "white" }
   ],
+
   "wolf": [
     { "name": "王狼", "type": "Attack", "alignment": "wolf", "result": "black" },
-    { "name": "暴走狼", "type": "Attack", "alignment": "wolf", "result": "black" }
+    { "name": "暴走狼", "type": "Attack", "alignment": "wolf", "result": "black" },
+    { "name": "双牙狼", "type": "Attack", "alignment": "wolf", "result": "black" },
+    { "name": "鈍足狼", "type": "Attack", "alignment": "wolf", "result": "black" },
+    { "name": "遅刻狼", "type": "Attack", "alignment": "wolf", "result": "black" },
+    { "name": "分裂狼", "type": "Effect", "alignment": "wolf", "result": "black" }
   ],
+
   "mad": [
-    { "name": "共鳴狂人", "type": "Detect", "alignment": "wolf", "result": "black" }
+    { "name": "共鳴狂人", "type": "Detect", "alignment": "wolf", "result": "black" },
+    { "name": "投票狂人", "type": "Effect", "alignment": "wolf", "result": "black" },
+    { "name": "透明狂人", "type": "Effect", "alignment": "wolf", "result": "unknown" },
+    { "name": "殉教狂人", "type": "Effect", "alignment": "wolf", "result": "black" }
   ],
+
   "third": [
-    { "name": "狐", "type": "Effect", "alignment": "third", "result": "third" }
+    { "name": "狐", "type": "Effect", "alignment": "third", "result": "third" },
+    { "name": "殉教者", "type": "Effect", "alignment": "third", "result": "third" },
+    { "name": "共生者", "type": "Effect", "alignment": "third", "result": "third" }
   ]
 }
