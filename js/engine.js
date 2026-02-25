@@ -13,6 +13,10 @@ const Game = {
     State.roleRevealIndex = 0;
 
     UI.renderRoleReveal();
+
+    State.phase = "night_input";
+    State.nightInputIndex = 0;
+    UI.renderNightTurn();
   },
 
   createPlayers() {
