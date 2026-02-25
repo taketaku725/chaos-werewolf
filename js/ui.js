@@ -12,15 +12,48 @@ const UI = {
   `  ;
   },
 
-  renderNightInput() {
+  renderRoleReveal() {
     const screen = document.getElementById("screen");
-    const players = State.players
-      .map(p => `<li>${p.name} - ${p.role.name}</li>`)
-      .join("");
+    const player = State.players[State.roleRevealIndex];
 
     screen.innerHTML = `
+      <h2>${player.name}</h2>
+      <p>あなたの役職を確認してください</p>
+      <button onclick="UI.showRole()">見る</button>
+  `  ;
+  },
+
+  showRole() {
+    const player = State.players[State.roleRevealIndex];
+    const screen = document.getElementById("screen");
+
+    screen.innerHTML = `
+      <h2>${player.name}</h2>
+      <h3>${player.role.name}</h3>
+      <p>陣営: ${player.alignment}</p>
+      <button onclick="UI.hideRole()">隠す</button>
+  `  ;
+  },
+
+  hideRole() {
+    State.roleRevealIndex++;
+
+    if (State.roleRevealIndex >= State.players.length) {
+      State.phase = "night_input";
+      State.nightNumber = 0;
+      UI.renderNightInput();
+      return;
+    }
+
+    UI.renderRoleReveal();
+  },
+
+  renderNightInput() {
+    const screen = document.getElementById("screen");
+    screen.innerHTML = `
       <h2>初夜</h2>
-      <ul>${players}</ul>
+      <p>役職確認が完了しました。</p>
+      <button onclick="Game.nextPhase()">夜を進める</button>
   `  ;
   },
 
