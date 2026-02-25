@@ -4,6 +4,7 @@ const State = {
   players: [],
   rolesData: null,
   rollRevealIndex: 0,
+  nightInputIndex: 0,
   settings: {
     totalPlayers: 9,
     citizen: 5,
