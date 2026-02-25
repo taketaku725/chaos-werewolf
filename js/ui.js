@@ -68,6 +68,32 @@ const UI = {
     `;
   },
 
+  renderSeerAction(player) {
+    const screen = document.getElementById("screen");
+
+    const targets = State.players
+      .filter(p => p.id !== player.id)
+      .map(p => `<button onclick="UI.resolveSeer(${p.id})">${p.name}</button>`)
+      .join("<br>");
+
+    screen.innerHTML = `
+      <h3>占う相手を選んでください</h3>
+      ${targets}
+    `;
+  },
+
+  resolveSeer(targetId) {
+    const player = State.players[State.nightInputIndex];
+    const target = State.players.find(p => p.id === targetId);
+    const screen = document.getElementById("screen");
+
+    screen.innerHTML = `
+      <p>${target.name} の判定は...</p>
+      <h3>${target.role.result}</h3>
+      <button onclick="UI.nextNightPlayer()">次へ</button>
+    `;
+  },
+
   renderDay() {
     const screen = document.getElementById("screen");
     screen.innerHTML = "<h2>朝</h2><p>死亡者発表など</p>";
